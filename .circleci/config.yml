@@ -55,6 +55,6 @@ workflows:
     jobs: # 実行するジョブをここにリストします
       - one:
           requires:
-            -two
+            - two
       - two:
 
