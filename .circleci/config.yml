@@ -54,5 +54,7 @@ workflows:
   one_and_two: # ワークフローの名前
     jobs: # 実行するジョブをここにリストします
       - one
+          requires:
+            -two
       - two
 
