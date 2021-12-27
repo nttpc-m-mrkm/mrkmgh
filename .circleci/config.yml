@@ -53,8 +53,8 @@ workflows:
   version: 2
   one_and_two: # ワークフローの名前
     jobs: # 実行するジョブをここにリストします
-      - one
+      - one:
           requires:
             -two
-      - two
+      - two:
 
