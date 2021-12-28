@@ -2,6 +2,7 @@ name: Action Sample
 
 on:
   push:
+    - githubactions
   workflow_dispatch:
 
 jobs:
