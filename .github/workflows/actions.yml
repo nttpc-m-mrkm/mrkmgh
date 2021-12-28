@@ -2,7 +2,7 @@ name: Action Sample
 
 on:
   push:
-    - githubactions
+    branches: [ githubactions ]
   workflow_dispatch:
 
 jobs:
