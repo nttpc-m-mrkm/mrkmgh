@@ -18,7 +18,8 @@ jobs:
         run: node -v #nodeバージョンの確認
   foo:
     needs: node-docker
-      #runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: job foo
         run: echo foo!
+        run: node -v
