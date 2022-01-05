@@ -15,5 +15,6 @@ jobs:
       - name: Log node version
         run: |
           node -v #nodeバージョンの確認
-          #cat /etc/os-relese #Linuxバージョンの確認
-
+  foo:
+    - name: job foo
+      run: echo foo!
