@@ -21,6 +21,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: job foo
+        run: echo foo!
+  setup_aws:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install aws cli
         run: |
-          echo foo!
-          node -v
+          sudo apt-get update
+          sudo apt-get install -y python-pip
+          pip install awscli
