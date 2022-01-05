@@ -21,5 +21,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: job foo
-        run: echo foo!
-        run: node -v
+        run: |
+          echo foo!
+          node -v
