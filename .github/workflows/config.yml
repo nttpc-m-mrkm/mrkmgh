@@ -32,6 +32,8 @@ jobs:
           restore-keys: npm-
       - name: Install npm packages
         run: npm install
+      - name: npm packages
+        run: npm list
 
   setup_aws:
     runs-on: ubuntu-latest
