@@ -13,8 +13,10 @@ jobs:
       image: node:8
     steps:
       - name: Log node version
-        run: |
-          node -v #nodeバージョンの確認
+        run: node -v #nodeバージョンの確認
+  foo:
+    needs: node-docker
+    runs-on: ubuntu-latest
+    steps:
       - name: job foo
         run: echo foo!
-        needs: Log node version
