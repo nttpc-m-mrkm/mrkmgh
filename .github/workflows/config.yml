@@ -30,3 +30,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y python3-pip
           pip install awscli
+  git_config:
+    runs-on: ubuntu-latest
+    steps:
+      - run: git config --global core.quotepath false
+  update_settings:
+    runs-on: ubuntu-latest
+    steps:
+      - run: cp src/settings/set.yml.example src/settings/set.yml
