@@ -16,5 +16,5 @@ jobs:
         run: |
           node -v #nodeバージョンの確認
   foo:
-    - name: job foo
-      run: echo foo!
+    name: job foo
+    run: echo foo!
