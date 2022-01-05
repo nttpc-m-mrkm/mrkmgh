@@ -37,4 +37,4 @@ jobs:
   update_settings:
     runs-on: ubuntu-latest
     steps:
-      - run: cp src/settings/set.yml.example src/settings/set.yml
+      - run: cp mrkmgh/src/settings/set.yml.example mrkmgh/src/settings/set.yml
