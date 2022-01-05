@@ -10,10 +10,10 @@ jobs:
   node-docker:
     runs-on: ubuntu-latest
     container:
-      image: node:13.5.0-alpine3.10
+      image: node:8
     steps:
       - name: Log node version
         run: |
           node -v #nodeバージョンの確認
-          cat /etc/os-relese #Linuxバージョンの確認
+          #cat /etc/os-relese #Linuxバージョンの確認
 
