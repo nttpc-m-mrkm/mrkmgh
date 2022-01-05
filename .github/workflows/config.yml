@@ -15,7 +15,5 @@ jobs:
       - name: Log node version
         run: |
           node -v #nodeバージョンの確認
-  foo:
-    steps:
       - name: job foo
         run: echo foo!
