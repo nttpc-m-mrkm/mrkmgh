@@ -52,8 +52,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-       - uses: actions/cache@v2
-       with:
-         path: ${YARN_CACHE_FOLDER}
-         key: ${{ runner.os }}-yarn-cache-v1
+      - uses: actions/cache@v2
+        with:
+          path: ${YARN_CACHE_FOLDER}
+          key: ${{ runner.os }}-yarn-cache-v1
       - run: yarn install
