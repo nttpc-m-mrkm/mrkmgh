@@ -33,7 +33,7 @@ jobs:
       - name: Install npm packages
         run: npm install
       - name: npm packages
-        run: npm list
+        run: npm list -g
 
   setup_aws:
     runs-on: ubuntu-latest
