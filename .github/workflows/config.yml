@@ -17,3 +17,4 @@ jobs:
           node -v #nodeバージョンの確認
       - name: job foo
         run: echo foo!
+        needs: Log node version
