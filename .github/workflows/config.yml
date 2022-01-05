@@ -17,6 +17,8 @@ jobs:
 
   update_packages:
     runs-on: ubuntu-latest
+    container:
+      image: node:8
     steps:
       - name: Install npm packages
         run: npm install
