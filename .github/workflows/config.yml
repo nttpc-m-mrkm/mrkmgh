@@ -32,8 +32,6 @@ jobs:
           restore-keys: npm-
       - name: Install npm packages
         run: npm install
-      - name: Run Test
-        run: npm run test
 
   setup_aws:
     runs-on: ubuntu-latest
