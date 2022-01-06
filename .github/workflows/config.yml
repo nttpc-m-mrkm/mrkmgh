@@ -2,7 +2,8 @@ name: circleci -> actions
 
 on:
   push:
-    #branches:
+    branches:
+      - '**'
     # - circleci-project-setup
     workflow_dispatch:
 
