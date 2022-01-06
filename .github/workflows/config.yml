@@ -2,13 +2,14 @@ name: circleci -> actions
 
 on:
   push:
-    branches:
-      - circleci-project-setup
+    #branches:
+    # - circleci-project-setup
     workflow_dispatch:
 
 jobs:
   node-docker:
     runs-on: ubuntu-latest
+    if: github.ref == 'circleci-project-setup'
     container:
       image: node:8
     steps:
