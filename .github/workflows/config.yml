@@ -38,9 +38,9 @@ jobs:
       - name: Install aws cli
         run: |
           apt-get update
-          apt-get install sudo
-          sudo apt-get update
-          sudo apt-get install -y python3-pip
+          apt-get install -y python-pip
+          #sudo apt-get update
+          #sudo apt-get install -y python3-pip
           pip install awscli
   git_config:
     runs-on: ubuntu-latest
