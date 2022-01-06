@@ -32,6 +32,8 @@ jobs:
 
   setup_aws:
     runs-on: ubuntu-latest
+    container:
+      image: node:14.x
     steps:
       - name: Install aws cli
         run: |
