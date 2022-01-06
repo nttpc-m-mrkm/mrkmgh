@@ -5,47 +5,60 @@ on:
   workflow_dispatch:
 
 jobs:
-  node-docker:
-    runs-on: ubuntu-latest
-      #if: github.ref == 'refs/heads/circleci-project-setup'
-    container:
-      image: node:8
-    steps:
-      - name: Log node version
-        run: node -v #nodeバージョンの確認
+#  node-docker:
+#    runs-on: ubuntu-latest
+#      #if: github.ref == 'refs/heads/circleci-project-setup'
+#    container:
+#      image: node:8
+#    steps:
+#      - name: Log node version
+#        run: node -v #nodeバージョンの確認
 
-  update_packages:
-    runs-on: ubuntu-latest
-    container:
-      image: node:8
-    steps:
-      - name: Cahe dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: npm-${{ hashFiles('package-lock.json') }}
-          restore-keys: npm-
-      - name: Install npm packages
-        run: npm install
-      - name: npm packages
-        run: npm list -g
+          #  update_packages:
+          #    runs-on: ubuntu-latest
+          #    container:
+          #      image: node:8
+          #    steps:
+          #      - name: Cahe dependencies
+          #        uses: actions/cache@v2
+          #        with:
+          #          path: ~/.npm
+          #          key: npm-${{ hashFiles('package-lock.json') }}
+          #          restore-keys: npm-
+          #      - name: Install npm packages
+          #        run: npm install
+          #      - name: npm packages
+          #        run: npm list -g
 
-  setup_aws:
+  #  setup_aws:
+  #  runs-on: ubuntu-latest
+  #  container:
+  #    image: node:8
+  #  steps:
+  #    - name: Install aws cli
+  #      run: |
+  #        apt-get update
+  #        apt-get install -y sudo
+  #        #sudo apt-get update
+  #        sudo apt-get install -y python-pip
+  #        pip install awscli
+
+  #git_config:
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #    - run: git config --global core.quotepath false
+
+  test:
     runs-on: ubuntu-latest
     container:
       image: node:8
     steps:
-      - name: Install aws cli
+      - name: Install dependencies
         run: |
           apt-get update
           apt-get install -y sudo
           #sudo apt-get update
-          sudo apt-get install -y python-pip
-          pip install awscli
-  git_config:
-    runs-on: ubuntu-latest
-    steps:
-      - run: git config --global core.quotepath false
+          sudo apt-get install -y libasound2 libxss1 libnss3-dev libgtk-3-dev libgconf-2-4
 
         #update_settings:
         #runs-on: ubuntu-latest
