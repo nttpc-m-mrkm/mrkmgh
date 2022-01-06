@@ -2,8 +2,6 @@ name: circleci -> actions
 
 on:
   push:
-    #branches:
-    # - circleci-project-setup
   workflow_dispatch:
 
 jobs:
