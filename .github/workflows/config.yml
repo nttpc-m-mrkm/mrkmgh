@@ -4,7 +4,7 @@ on:
   push:
     #branches:
     # - circleci-project-setup
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   node-docker:
