@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
       #if: github.ref == 'refs/heads/circleci-project-setup'
     container:
-      image: node:8
+      image: node:14
     steps:
       - name: Log node version
         run: node -v #nodeバージョンの確認
@@ -17,7 +17,7 @@ jobs:
   update_packages:
     runs-on: ubuntu-latest
     container:
-      image: node:8
+      image: node:14
     steps:
       - name: Cahe dependencies
         uses: actions/cache@v2
@@ -33,7 +33,7 @@ jobs:
   setup_aws:
     runs-on: ubuntu-latest
     container:
-      image: node:14.x
+      image: node:14
     steps:
       - name: Install aws cli
         run: |
