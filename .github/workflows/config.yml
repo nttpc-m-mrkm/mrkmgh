@@ -9,7 +9,7 @@ on:
 jobs:
   node-docker:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/circleci-project-setup'
+      #if: github.ref == 'refs/heads/circleci-project-setup'
     container:
       image: node:8
     steps:
