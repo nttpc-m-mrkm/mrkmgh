@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
       #if: github.ref == 'refs/heads/circleci-project-setup'
     container:
-      image: node:14
+      image: node:8
     steps:
       - name: Log node version
         run: node -v #nodeバージョンの確認
@@ -17,7 +17,7 @@ jobs:
   update_packages:
     runs-on: ubuntu-latest
     container:
-      image: node:14
+      image: node:8
     steps:
       - name: Cahe dependencies
         uses: actions/cache@v2
@@ -33,10 +33,12 @@ jobs:
   setup_aws:
     runs-on: ubuntu-latest
     container:
-      image: node:14
+      image: node:8
     steps:
       - name: Install aws cli
         run: |
+          apt-get update && \
+            apt-get -y install sudo
           sudo apt-get update
           sudo apt-get install -y python3-pip
           pip install awscli
